@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteExpress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-image: url('Main-page.svg');
+            background-size:cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .options {
+            display: flex;
+            gap: 20vw;
+        }
+        .option {
+            text-align: center;
+        }
+        .option img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .button {
+            background-color: #E67E22;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #D35400;
+        }
+        .login-container {
+            display: none;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .login-left {
+            flex: 1;
+            background: url('login-img.svg');
+            background-size: cover;
+        }
+        .login-right {
+            flex: 1;
+            background-color: #2f4157;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .login-box {
+            width: 80%;
+            max-width: 400px;
+            text-align: left;
+        }
+        .login-box h2 {
+            margin-bottom: 10px;
+        }
+        .input-box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #E67E22;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #D35400;
+        }
+        .link {
+            margin-top: 10px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .back-btn {
+            margin-top: 15px;
+            background-color: #E67E22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background-color: #D35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainPage">
+        <div class="options">
+            <div class="option">
+                <button class="button" onclick="showLoginPage()">Voter</button>
+            </div>
+            <div class="option">
+                <button class="button" onclick="showLoginPage()">Admin</button>
+            </div>
+        </div>
+    </div>
+    <div class="login-container" id="loginPage">
+        <div class="login-left"></div>
+        <div class="login-right">
+            <div class="login-box">
+                <h2>Welcome back!</h2>
+                <p>Let's Login to Your Account</p>
+                <input type="text" class="input-box" placeholder="Username">
+                <input type="password" class="input-box" placeholder="Password">
+                <button class="login-btn">Login</button>
+                <button class="back-btn" onclick="showMainPage()">Back</button>
+                <p class="link">Don't have an account? <span onclick="showMainPage()">Sign In now</span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showLoginPage() {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'flex';
+        }
+        function showMainPage() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('mainPage').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
