@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Manifestos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #2A3B4F;
+            color: white;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #1F2B38;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-left: 20px;
+        }
+        .options {
+            margin-right: 20px;
+        }
+        
+        .button-container {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+        
+        main {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background-color: #577c8e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #3F5673;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .candidate-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .manifesto {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Voter Express</h1>
+            <nav class="options">
+                <ul class="button-container">
+                    <li><a class="button" href="votehome.html">Home</a></li>
+                    <li><a class="button" href="voter-rules.html">Rules</a></li>
+                    <li><a class="button" href="voter-livepoll.html">Live Poll</a></li>
+                    <li><a class="button" href="voter-manifesto.html">Manifesto</a></li>
+                    <li><a class="button" href="voter-feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>CANDIDATE'S MANIFESTOS</h2>
+        <div class="container">
+            <div class="card">
+                <div class="profile-icon">C1</div>
+                <div class="card-content">
+                    <div class="candidate-name">Candidate 1</div>
+                    <p class="manifesto">A visionary leader with a proven track record of service and innovation. Their dedication ensures a brighter future for our community.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-icon">C2</div>
+                <div class="card-content">
+                    <div class="candidate-name">Candidate 2</div>
+                    <p class="manifesto">A strong advocate for key issues, bringing experience and fresh ideas to the table. Their leadership will foster positive change.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-icon">C3</div>
+                <div class="card-content">
+                    <div class="candidate-name">Candidate 3</div>
+                    <p class="manifesto">A hardworking individual committed to transparency, accountability, and inclusive growth. The right choice for a better tomorrow.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-icon">C4</div>
+                <div class="card-content">
+                    <div class="candidate-name">Candidate 4</div>
+                    <p class="manifesto">A true people's champion, fighting for progress, equality, and sustainable development. Their leadership will uplift everyone.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
